@@ -97,3 +97,23 @@ function absentVowel(x){
     }
     
   }
+
+//   find the index of the letter it is searching for - str.indexOf(letter),
+// replace index+1 with toLocaleUpperCase
+// find next index of letter starting from index + 1.
+// repeat for the length of the string
+
+  var makeEveryLetterAfterXCaps = function (str, letter) {
+    // enter solution here
+    let  newStr = '';
+    let num = 0;
+    // for (i = 0; i <= str.length; i++) {
+    let replaceIndex = (str.indexOf(letter, num) + 1);
+    let newLetter = str.substr(replaceIndex,replaceIndex);
+    newStr = str.replace(newLetter, newLetter.toUpperCase());
+    num += replaceIndex;
+    // }
+
+    console.log(newStr);
+    
+    }
