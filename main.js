@@ -103,7 +103,7 @@ function absentVowel(x){
 // find next index of letter starting from index + 1.
 // repeat for the length of the string
 
-  var makeEveryLetterAfterXCaps = function (str, letter) {
+  function makeEveryLetterAfterXCaps = function (str, letter) {
     // enter solution here
     let  newStr = '';
     let num = 0;
@@ -117,3 +117,15 @@ function absentVowel(x){
     console.log(newStr);
     
     }
+
+
+// given an array of multiple dimensions, return the element of the given index
+// have no idea on this one, will come back to it
+function getElement(array, indexes) {
+  for (i = 0; i <= array.length; i++ ){
+    if (i === indexes) {
+      return array[indexes];
+    }
+  }
+
+}
