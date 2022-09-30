@@ -43,32 +43,30 @@ function findLongest(str) {
     return longest
 }
 
-// function coinCombo(cents) {
+function coinCombo(cents) {
 
-//     let cents = []
+  let quart = 0
+  let dime = 0;
+  let nick = 0;
+  let penny = 0;
 
-//     let quart = 0;
-//     let dime = 0;
-//     let nick = 0;
-//     let penny = 0;
-
-//     if (cents >= 25) {
-//         quart = Math.floor(cents / 25);
-//         cents = cents - (25 * quart);
-//     }
-//     if (cents >= 10) {
-//         dime = Math.floor(cents / 10);
-//         cents = cents - (dime * 10);
-//     }
-//     if (cents >= 5) {
-//         nick = Math.floor(cents / 5);
-//         cents = cents - (nick * 5);
-//     }
-//     if (cents >= 0) {
-//         pennies = cents;
-//     }
-//     return [penny, dime, nick, quart]
-// }
+  if (cents >= 25) {
+    quart = Math.floor(cents / 25);
+    cents = cents - (25 * quart);
+  }
+  if (cents >= 10) {
+    dime = Math.floor(cents / 10);
+    cents = cents - (dime * 10);
+  }
+  if (cents >= 5) {
+    nick = Math.floor(cents / 5);
+    cents = cents - (nick * 5);
+  }
+  if (cents >= 0) {
+    penny = cents;
+  }
+  return [penny, nick, dime, quart]
+}
 
 function noSpace(x) {
 
@@ -103,13 +101,15 @@ function absentVowel(x){
 // find next index of letter starting from index + 1.
 // repeat for the length of the string
 
-  function makeEveryLetterAfterXCaps = function (str, letter) {
+  function makeEveryLetterAfterXCaps(str, letter) {
     // enter solution here
     let  newStr = '';
     let num = 0;
     // for (i = 0; i <= str.length; i++) {
     let replaceIndex = (str.indexOf(letter, num) + 1);
-    let newLetter = str.substr(replaceIndex,replaceIndex);
+    console.log(replaceIndex);
+    let newLetter = str.substr(replaceIndex,replaceIndex + 1);
+    console.log(newLetter);
     newStr = str.replace(newLetter, newLetter.toUpperCase());
     num += replaceIndex;
     // }
