@@ -103,14 +103,15 @@ function absentVowel(x){
 
   function makeEveryLetterAfterXCaps(str, letter) {
     // enter solution here
-    let  newStr;
-    
+    let  newStr = str;
     for (i = 0; i < str.length; i++){
       if (str[i] === letter){
-       let upperLet = str[i+1].toUpperCase();
-       str.replace(letter, upperLet);
+        if(i === (str.length - 1)){
+          return newStr;
+        }
+      newStr = newStr.replace(newStr[i+1], newStr[i+1].toUpperCase());
       }
-    } return str;
+    } return newStr;
   }
 
     // }
