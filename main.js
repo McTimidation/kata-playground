@@ -103,20 +103,35 @@ function absentVowel(x){
 
   function makeEveryLetterAfterXCaps(str, letter) {
     // enter solution here
-    let  newStr = '';
-    let num = 0;
-    // for (i = 0; i <= str.length; i++) {
-    let replaceIndex = (str.indexOf(letter, num) + 1);
-    console.log(replaceIndex);
-    let newLetter = str.substr(replaceIndex,replaceIndex + 1);
-    console.log(newLetter);
-    newStr = str.replace(newLetter, newLetter.toUpperCase());
-    num += replaceIndex;
-    // }
-
-    console.log(newStr);
+    let  newStr;
     
-    }
+    for (i = 0; i < str.length; i++){
+      if (str[i] === letter){
+       let upperLet = str[i+1].toUpperCase();
+       str.replace(letter, upperLet);
+      }
+    } return str;
+  }
+
+    // }
+    // newStr =  str.map((item, i) => {
+    //   console.log(item + ' : ' + i);
+    //   if (str[i] === letter){
+    //   str[i+1].toUpperCase();
+    //   } 
+      
+    // })
+    // console.log(replaceIndex);
+    // let newLetter = str.substr( replaceIndex, replaceIndex);
+    // console.log(newLetter);
+    // newStr = str.replace(newLetter, newLetter.toUpperCase());
+    // console.log
+    // num += replaceIndex;
+    
+    
+
+    
+    
 
 
 // given an array of multiple dimensions, return the element of the given index
