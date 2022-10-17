@@ -264,4 +264,26 @@ function likes(names) {
        }
       }
   }
-   
+
+
+  decodeMorse = function(morseCode){
+    let newArr;
+    let morseArr = morseCode.split('   ');
+    let word = '';
+    let returnArray = [];
+    
+    morseArr.forEach((array) => {
+     newArr = array.split(' ');
+      newArr.forEach((char) => {
+        console.log(char);
+        word = MORSE_CODE[char];
+        returnArray.push(word);
+        console.log(returnArray)
+        
+      }); newArr = newArr.join(',');
+          return newArr;
+          
+        
+      })
+    
+    }
